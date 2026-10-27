@@ -39,7 +39,7 @@
 <div id="backdrop" class="backdrop"></div><aside id="drawer" class="drawer"></aside><div id="modalBack" class="modal-back"><div id="modal" class="modal"></div></div>
 <script>
 const LEVEL_BONUS={1:0,2:2,3:4,4:6,5:8,6:9,7:11,8:13,9:16,10:18,11:19,12:21,13:23,14:24,15:26,16:28,17:30,18:31,19:33,20:35,21:37,22:40,23:42,24:45,25:47,26:50,27:52,28:55,29:58,30:61,31:64,32:67,33:70,34:74,35:77,36:81,37:84,38:88,39:92,40:96,41:100,42:104,43:108,44:113,45:117,46:122,47:127,48:132,49:137,50:142,51:148,52:153,53:159,54:165,55:171,56:177,57:183,58:190,59:197,60:203,61:209,62:215,63:221,64:227,65:234,66:239,67:243,68:248,69:252,70:258};
-const APP_VERSION='2026-09-23d';
+const APP_VERSION='2026-10-27a';
 let ingredients=[],recipes=[],I={};
 const defaultState={tab:'today',pot:32,category:'Curry / Stew',showOver:true,enabled:{},inventory:{},levels:{},plans:{},selectedSlot:null,inventoryOpen:{today:false,plan:false},dayOpen:{},makeable:false,pickerMakeable:false,geminiKey:'',geminiModel:'gemini-3.8-flash',geminiModels:[]};
 const store={get(){try{return localStorage.getItem('cookingPlannerV1')}catch(e){return null}},set(v){try{localStorage.setItem('cookingPlannerV1',v)}catch(e){}}};
