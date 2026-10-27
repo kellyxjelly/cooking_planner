@@ -10,7 +10,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 668,
+        "baseStrength": 748,
         "imageSrc": "./assets/images/curry/fancy-apple-curry.png"
       },
       {
@@ -40,7 +40,7 @@
             "quantity": 5
           }
         ],
-        "baseStrength": 1943,
+        "baseStrength": 2078,
         "imageSrc": "./assets/images/curry/solar-power-tomato-curry.png"
       },
       {
@@ -97,7 +97,7 @@
             "quantity": 9
           }
         ],
-        "baseStrength": 4041,
+        "baseStrength": 4162,
         "imageSrc": "./assets/images/curry/spore-mushroom-curry.png"
       },
       {
@@ -135,7 +135,7 @@
             "quantity": 8
           }
         ],
-        "baseStrength": 1785,
+        "baseStrength": 1910,
         "imageSrc": "./assets/images/curry/hearty-cheeseburger-curry.png"
       },
       {
@@ -154,7 +154,7 @@
             "quantity": 4
           }
         ],
-        "baseStrength": 3089,
+        "baseStrength": 3181,
         "imageSrc": "./assets/images/curry/soft-potato-chowder.png"
       },
       {
@@ -165,7 +165,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 727,
+        "baseStrength": 814,
         "imageSrc": "./assets/images/curry/simple-chowder.png"
       },
       {
@@ -176,7 +176,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 764,
+        "baseStrength": 856,
         "imageSrc": "./assets/images/curry/beanburger-curry.png"
       },
       {
@@ -187,7 +187,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 749,
+        "baseStrength": 839,
         "imageSrc": "./assets/images/curry/mild-honey-curry.png"
       },
       {
@@ -225,7 +225,7 @@
             "quantity": 5
           }
         ],
-        "baseStrength": 1881,
+        "baseStrength": 1942,
         "imageSrc": "./assets/images/curry/drought-katsu-curry.png"
       },
       {
@@ -240,7 +240,7 @@
             "quantity": 6
           }
         ],
-        "baseStrength": 2009,
+        "baseStrength": 2150,
         "imageSrc": "./assets/images/curry/melty-omelette-curry.png"
       },
       {
@@ -263,7 +263,7 @@
             "quantity": 4
           }
         ],
-        "baseStrength": 3274,
+        "baseStrength": 3372,
         "imageSrc": "./assets/images/curry/bulk-up-bean-curry.png"
       },
       {
@@ -505,7 +505,7 @@
             "quantity": 8
           }
         ],
-        "baseStrength": 5858,
+        "baseStrength": 5859,
         "imageSrc": "./assets/images/salads/spore-mushroom-salad.png"
       },
       {
@@ -520,7 +520,7 @@
             "quantity": 6
           }
         ],
-        "baseStrength": 1774,
+        "baseStrength": 1898,
         "imageSrc": "./assets/images/salads/snow-cloak-caesar-salad.png"
       },
       {
@@ -581,7 +581,7 @@
             "quantity": 3
           }
         ],
-        "baseStrength": 2958,
+        "baseStrength": 3046,
         "imageSrc": "./assets/images/salads/superpower-extreme-salad.png"
       },
       {
@@ -592,7 +592,7 @@
             "quantity": 8
           }
         ],
-        "baseStrength": 873,
+        "baseStrength": 978,
         "imageSrc": "./assets/images/salads/bean-ham-salad.png"
       },
       {
@@ -603,7 +603,7 @@
             "quantity": 8
           }
         ],
-        "baseStrength": 933,
+        "baseStrength": 1045,
         "imageSrc": "./assets/images/salads/snoozy-tomato-salad.png"
       },
       {
@@ -622,7 +622,7 @@
             "quantity": 5
           }
         ],
-        "baseStrength": 2856,
+        "baseStrength": 2942,
         "imageSrc": "./assets/images/salads/moomoo-caprese-salad.png"
       },
       {
@@ -637,7 +637,7 @@
             "quantity": 9
           }
         ],
-        "baseStrength": 3558,
+        "baseStrength": 3665,
         "imageSrc": "./assets/images/salads/contrary-chocolate-meat-salad.png"
       },
       {
@@ -667,7 +667,7 @@
             "quantity": 8
           }
         ],
-        "baseStrength": 763,
+        "baseStrength": 855,
         "imageSrc": "./assets/images/salads/fancy-apple-salad.png"
       },
       {
@@ -682,7 +682,7 @@
             "quantity": 5
           }
         ],
-        "baseStrength": 2658,
+        "baseStrength": 2845,
         "imageSrc": "./assets/images/salads/immunity-leek-salad.png"
       },
       {
@@ -701,7 +701,7 @@
             "quantity": 3
           }
         ],
-        "baseStrength": 2578,
+        "baseStrength": 2655,
         "imageSrc": "./assets/images/salads/dazzling-apple-cheese-salad.png"
       },
       {
@@ -739,7 +739,7 @@
             "quantity": 6
           }
         ],
-        "baseStrength": 1976,
+        "baseStrength": 2114,
         "imageSrc": "./assets/images/salads/heat-wave-tofu-salad.png"
       },
       {
@@ -973,7 +973,7 @@
             "quantity": 5
           }
         ],
-        "baseStrength": 1783,
+        "baseStrength": 1907,
         "imageSrc": "./assets/images/desserts/fluffy-sweet-potatoes.png"
       },
       {
@@ -1007,7 +1007,7 @@
             "quantity": 8
           }
         ],
-        "baseStrength": 763,
+        "baseStrength": 855,
         "imageSrc": "./assets/images/desserts/fancy-apple-juice.png"
       },
       {
@@ -1018,7 +1018,7 @@
             "quantity": 9
           }
         ],
-        "baseStrength": 964,
+        "baseStrength": 1079,
         "imageSrc": "./assets/images/desserts/craft-soda-pop.png"
       },
       {
@@ -1033,7 +1033,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 1788,
+        "baseStrength": 191:,
         "imageSrc": "./assets/images/desserts/ember-ginger-tea.png"
       },
       {
@@ -1094,7 +1094,7 @@
             "quantity": 4
           }
         ],
-        "baseStrength": 1634,
+        "baseStrength": 1748,
         "imageSrc": "./assets/images/desserts/lucky-chant-apple-pie.png"
       },
       {
@@ -1132,7 +1132,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 3280,
+        "baseStrength": 3378,
         "imageSrc": "./assets/images/desserts/sweet-scent-chocolate-cake.png"
       },
       {
@@ -1143,7 +1143,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 727,
+        "baseStrength": 814,
         "imageSrc": "./assets/images/desserts/warm-moomoo-milk.png"
       },
       {
@@ -1158,7 +1158,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 1798,
+        "baseStrength": 1924,
         "imageSrc": "./assets/images/desserts/cloud-nine-soy-cake.png"
       },
       {
@@ -1188,7 +1188,7 @@
             "quantity": 7
           }
         ],
-        "baseStrength": 1798,
+        "baseStrength": 1924,
         "imageSrc": "./assets/images/desserts/stalwart-vegetable-juice.png"
       },
       {
@@ -1207,7 +1207,7 @@
             "quantity": 6
           }
         ],
-        "baseStrength": 2927,
+        "baseStrength": 3015,
         "imageSrc": "./assets/images/desserts/big-malasada.png"
       },
       {
