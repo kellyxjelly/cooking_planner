@@ -464,6 +464,26 @@
         ],
         "baseStrength": 25539,
         "imageSrc": "./assets/images/curry/bounce-curry-udon.png"
+      },
+      ,
+      {
+        "name": "Seed Bomb Naan and Curry",
+        "ingredients": [
+          {
+            "name": "Snackable Nuts",
+            "quantity": 15
+          },
+          {
+            "name": "Plump Pumpkin",
+            "quantity": 12
+          },
+          {
+            "name": "Greengrass Corn",
+            "quantity": 12
+          }
+        ],
+        "baseStrength": 7950
+        "imageSrc": "./assets/images/curry/seedbombnaanandcurry.png"
       }
     ]
   },
@@ -955,6 +975,30 @@
         ],
         "baseStrength": 25356,
         "imageSrc": "./assets/images/salads/scald-chunky-salad.png"
+      },
+      ,
+      {
+        "name": "Grass Knot Salad Wrap",
+        "ingredients": [
+          {
+            "name": "Snackable Nuts",
+            "quantity": 30
+          },
+          {
+            "name": "Glossy Avocado",
+            "quantity": 22
+          },
+          {
+            "name": "Warming Ginger",
+            "quantity": 36
+          },
+          {
+            "name": "Snoozy Tomato",
+            "quantity": 33
+          }
+        ],
+        "baseStrength": 26350,
+        "imageSrc": "./assets/images/salads/grassknotsaladwrap.png"
       }
     ]
   },
@@ -1457,6 +1501,29 @@
         ],
         "baseStrength": 25484,
         "imageSrc": "./assets/images/desserts/honey-gather-chocolate-waffles.png"
+      },
+      {
+        "name": "Slowpoke Tail Roll Cake",
+        "ingredients": [
+          {
+            "name": "Snackable Nuts",
+            "quantity": 26
+          },
+          {
+            "name": "Slowpoke Tail",
+            "quantity": 10
+          },
+          {
+            "name": "Greengrass Soyboeans",
+            "quantity": 22
+          },
+          {
+            "name": "Fancy Egg",
+            "quantity": 33
+          }
+        ],
+        "baseStrength": 19846,
+        "imageSrc": "./assets/images/desserts/slowpoketailrollcake.png"
       }
     ]
   }
