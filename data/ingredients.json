@@ -93,5 +93,10 @@
     "name": "Glossy Avocado",
     "strength": 162,
     "imageSrc": "./assets/images/ingredient/glossy-avocado.png"
+  },
+  {
+    "name": "Snackable Nuts",
+    "strength": 112,
+    "imageSrc": "./assets/images/ingredient/snackablenuts.png"
   }
 ]
