@@ -482,7 +482,7 @@
           }
         ],
         "baseStrength": 7950
-        "imageSrc": "./assets/images/curry/seedbombnaanandcurry.png"
+        "imageSrc": "./assets/images/curry/seedbomb-naan-and-curry.png"
       }
     ]
   },
@@ -996,7 +996,7 @@
           }
         ],
         "baseStrength": 26350,
-        "imageSrc": "./assets/images/salads/grassknotsaladwrap.png"
+        "imageSrc": "./assets/images/salads/grassknot-salad-wrap.png"
       }
     ]
   },
@@ -1512,7 +1512,7 @@
             "quantity": 10
           },
           {
-            "name": "Greengrass Soyboeans",
+            "name": "Greengrass Soybeans",
             "quantity": 22
           },
           {
@@ -1521,7 +1521,7 @@
           }
         ],
         "baseStrength": 19846,
-        "imageSrc": "./assets/images/desserts/slowpoketailrollcake.png"
+        "imageSrc": "./assets/images/desserts/slowpoketail-roll-cake.png"
       }
     ]
   }
