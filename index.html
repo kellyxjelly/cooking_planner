@@ -5,10 +5,11 @@
 /* Compact image-only ingredient selector */
 .ingredient-filter{position:relative;display:inline-flex}.ingredient-trigger{min-height:38px;gap:4px}.ingredient-trigger img{width:23px;height:23px;object-fit:contain}.filter-count{background:#eaf0ff;color:#2455c9;border-radius:20px;padding:2px 6px;font-size:11px}.ingredient-trigger.active .filter-count{background:white;color:var(--blue)}.ingredient-popover{position:absolute;top:calc(100% + 7px);left:0;z-index:12;width:min(340px,calc(100vw - 42px));background:white;border:1px solid #dbe1ed;border-radius:15px;box-shadow:0 12px 32px #17213a30;padding:11px}.ingredient-popover[hidden]{display:none}.ingredient-popover h4{margin:0 0 8px;font-size:13px}.ingredient-icons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.ingredient-choice{position:relative;min-height:48px;background:#f8f9fc;border:2px solid transparent;border-radius:10px;display:grid;place-items:center;padding:4px}.ingredient-choice img{width:36px;height:36px;object-fit:contain}.ingredient-choice.selected{border-color:var(--blue);background:#edf3ff}.ingredient-choice.selected:after{content:'✓';position:absolute;right:0;top:0;background:var(--blue);color:white;border-radius:50%;font-size:9px;width:14px;height:14px;display:grid;place-items:center}.ingredient-options{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}.ingredient-options label{font-size:12px;font-weight:800}.ingredient-options select{border:1px solid #ccd4e4;border-radius:8px;padding:5px;font-size:12px}.ingredient-options button{background:#f1f4fa;padding:6px 9px;border-radius:8px;font-size:12px;font-weight:800}.ingredient-foot{font-size:11px;color:var(--muted);margin-top:8px}
 @media(max-width:620px){.app{padding:0 10px 32px}header{margin:0 -10px 14px;padding:10px 10px 0}.brand img{height:39px;max-width:110px}.brand h1{font-size:17px}.brand p{display:none}.meal-grid{grid-template-columns:1fr}.recipes{gap:8px}.recipe{padding:9px}.dish{width:43px;height:43px}.recipe h3{font-size:13px}.ing-total{font-size:15px}.inventory-list{gap:3px}.inventory-row{grid-template-columns:26px minmax(0,1fr) 77px;gap:3px}.inventory-row label{font-size:10px}.inventory-row .stepper{grid-template-columns:19px minmax(32px,1fr) 19px;min-height:27px}.inventory-row .stepper button{font-size:15px}.inventory-row .stepper input{font-size:12px;padding:2px}.ingredient-icons{grid-template-columns:repeat(5,minmax(0,1fr))}.ingredient-choice img{width:33px;height:33px}}
-</style></head><body><div class="app"><header><div class="top"><div class="brand"><img src="./assets/images/logo.png" alt="Pokemon Sleep" onerror="this.style.display='none'"><div><h1>Cooking Planner</h1><p>Private meal and ingredient planner</p></div></div><button id="gear" class="gear" aria-label="Settings">☰</button></div><nav class="tabs"><button data-tab="today">Today</button><button data-tab="plan">Plan</button><button data-tab="recipes">Recipes</button></nav></header><main id="content">Loading recipes...</main></div><div id="backdrop" class="backdrop"></div><aside id="drawer" class="drawer"></aside><div id="modalBack" class="modal-back"><div id="modal" class="modal"></div></div>
+.image-diagnostic{margin:8px 0;padding:9px;background:#fff6e5;border:1px solid #e7c678;border-radius:9px;font-size:11px;line-height:1.5}.image-diagnostic button{margin-top:7px}
+  </style></head><body><div class="app"><header><div class="top"><div class="brand"><img src="./assets/images/logo.png" alt="Pokemon Sleep" onerror="this.style.display='none'"><div><h1>Cooking Planner</h1><p>Private meal and ingredient planner</p></div></div><button id="gear" class="gear" aria-label="Settings">☰</button></div><nav class="tabs"><button data-tab="today">Today</button><button data-tab="plan">Plan</button><button data-tab="recipes">Recipes</button></nav></header><main id="content">Loading recipes...</main></div><div id="backdrop" class="backdrop"></div><aside id="drawer" class="drawer"></aside><div id="modalBack" class="modal-back"><div id="modal" class="modal"></div></div>
 <script>
 const LEVEL_BONUS={1:0,2:2,3:4,4:6,5:8,6:9,7:11,8:13,9:16,10:18,11:19,12:21,13:23,14:24,15:26,16:28,17:30,18:31,19:33,20:35,21:37,22:40,23:42,24:45,25:47,26:50,27:52,28:55,29:58,30:61,31:64,32:67,33:70,34:74,35:77,36:81,37:84,38:88,39:92,40:96,41:100,42:104,43:108,44:113,45:117,46:122,47:127,48:132,49:137,50:142,51:148,52:153,53:159,54:165,55:171,56:177,57:183,58:190,59:197,60:203,61:209,62:215,63:221,64:227,65:234,66:239,67:243,68:248,69:252,70:258};
-const APP_VERSION='2026-11-16a';let ingredients=[],recipes=[],I={};
+const APP_VERSION='2026-11-16b-image-debug';let ingredients=[],recipes=[],I={};
 const defaultState={tab:'today',pot:32,category:'Curry / Stew',showOver:true,enabled:{},inventory:{},levels:{},plans:{},selectedSlot:null,inventoryOpen:{today:false,plan:false},dayOpen:{},makeable:false,pickerMakeable:false,mondayPicks:false,pickerMonday:false,ingredientFilter:[],ingredientMode:'any',geminiKey:'',geminiModel:'gemini-3.8-flash',geminiModels:[]};
 const store={get(){try{return localStorage.getItem('cookingPlannerV1')}catch(e){return null}},set(v){try{localStorage.setItem('cookingPlannerV1',v)}catch(e){}}};
 let state=(()=>{try{return JSON.parse(store.get()||'null')||structuredClone(defaultState)}catch(e){return structuredClone(defaultState)}})();
@@ -72,4 +73,40 @@ function initializeState(){state.enabled||={};state.inventory||={};state.levels|
 function normalizeData(ingredientData,recipeGroups){ingredients=ingredientData.map(raw=>({id:slug(raw.name),name:raw.name,image:raw.imageSrc||''}));I=Object.fromEntries(ingredients.map(x=>[x.id,x]));recipes=[];recipeGroups.forEach(group=>{const cat=categoryName(group.title);(group.recipes||[]).forEach(raw=>{if(!Array.isArray(raw.ingredients)||!raw.ingredients.length)return;const ings={};raw.ingredients.forEach(item=>{const id=slug(item.name);ings[id]=(ings[id]||0)+(Number(item.quantity)||0)});recipes.push({id:slug(raw.name),name:raw.name,cat,base:Number(raw.baseStrength)||0,ings,image:raw.imageSrc||''})})})}
 async function loadData(){try{const [ingResponse,recipeResponse]=await Promise.all([fetch('./data/ingredients.json'),fetch('./data/recipes.json')]);if(!ingResponse.ok)throw new Error(`Could not load ingredients.json (${ingResponse.status})`);if(!recipeResponse.ok)throw new Error(`Could not load recipes.json (${recipeResponse.status})`);const [ingData,recipeData]=await Promise.all([ingResponse.json(),recipeResponse.json()]);normalizeData(ingData,recipeData);if(!ingredients.length||!recipes.length)throw new Error('No ingredient or recipe data found.');initializeState();save();render()}catch(error){document.getElementById('content').innerHTML=`<div class="error"><b>The planner could not load its recipe data.</b><p>${error.message}</p><code>Expected: ./data/ingredients.json and ./data/recipes.json</code></div>`;console.error(error)}}
 loadData();
+
+/* Temporary diagnostic for the Hidden Power recipe image. */
+function hiddenPowerDiagnostic(){
+  const target=recipes.find(r=>r.name.includes('Hidden Power')&&r.name.includes('Perk-Up'));
+  if(!target)return;
+  const cards=[...document.querySelectorAll('.recipe')].filter(c=>c.querySelector('h3')?.textContent===target.name);
+  cards.forEach(card=>{
+    const img=card.querySelector('.dish img');
+    if(!img)return;
+    let panel=card.querySelector('.image-diagnostic');
+    if(!panel){panel=document.createElement('div');panel.className='image-diagnostic';card.querySelector('.recipe-top')?.after(panel)}
+    const source=img.getAttribute('src')||'(empty)';
+    const resolved=img.currentSrc||img.src||'(empty)';
+    const loaded=img.complete&&img.naturalWidth>0;
+    const status=loaded?'LOADED':img.complete?'FAILED / EMPTY':'LOADING';
+    const hidden=getComputedStyle(img).display==='none';
+    panel.innerHTML='';
+    const info=document.createElement('div');
+    info.style.overflowWrap='anywhere';
+    info.textContent=`Image diagnostic: ${status} | ${img.naturalWidth} x ${img.naturalHeight} | hidden: ${hidden} | JSON path: ${target.image} | element path: ${source} | requested URL: ${resolved}`;
+    const button=document.createElement('button');button.type='button';button.className='secondary';button.textContent='Test image again';
+    button.onclick=()=>{
+      img.style.display='block';
+      img.onload=()=>hiddenPowerDiagnostic();
+      img.onerror=()=>hiddenPowerDiagnostic();
+      const url=new URL(target.image,document.baseURI);
+      url.searchParams.set('imageDebug',String(Date.now()));
+      img.src=url.href;
+      panel.firstChild.textContent='Retesting: '+url.href;
+    };
+    panel.append(info,button);
+  });
+}
+const originalPlannerRender=render;
+render=function(){originalPlannerRender();setTimeout(hiddenPowerDiagnostic,500)};
+
 </script></body></html>
